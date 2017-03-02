@@ -51,6 +51,7 @@ class AddCoinViewController: UIViewController, UIImagePickerControllerDelegate, 
         
         (UIApplication.shared.delegate as! AppDelegate).saveContext()
         
+        navigationController! .popViewController(animated: true)
         
         
     }
