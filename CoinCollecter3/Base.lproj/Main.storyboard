@@ -39,7 +39,7 @@
                     <navigationItem key="navigationItem" id="u7A-ku-XNu">
                         <barButtonItem key="rightBarButtonItem" systemItem="add" id="zxe-eK-1UU">
                             <connections>
-                                <segue destination="Oca-Tu-ejd" kind="show" id="NSn-OK-LFb"/>
+                                <segue destination="Oca-Tu-ejd" kind="show" identifier="coinSegue" id="NSn-OK-LFb"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>
@@ -70,28 +70,40 @@
                                     <constraint firstAttribute="height" constant="150" id="ixg-KP-xGF"/>
                                 </constraints>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="2Zd-QX-1Ok">
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="center" minimumFontSize="17" clearButtonMode="always" translatesAutoresizingMaskIntoConstraints="NO" id="2Zd-QX-1Ok">
                                 <rect key="frame" x="47.5" y="304" width="280" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRg-W8-CcD">
-                                <rect key="frame" x="156" y="360" width="63" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tRg-W8-CcD">
+                                <rect key="frame" x="156" y="359" width="63" height="30"/>
                                 <state key="normal" title="Add Coin"/>
                                 <connections>
                                     <action selector="addCoinTapped:" destination="Oca-Tu-ejd" eventType="touchUpInside" id="Wjd-1y-N02"/>
                                 </connections>
                             </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3mf-tw-ECq">
+                                <rect key="frame" x="165" y="414" width="45" height="30"/>
+                                <color key="tintColor" red="1" green="0.0" blue="0.019891490399700729" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="addCoinTapped:" destination="Oca-Tu-ejd" eventType="touchUpInside" id="xLx-QP-cuh"/>
+                                    <action selector="deleteBtnTapped:" destination="Oca-Tu-ejd" eventType="touchUpInside" id="sW6-Wi-MTO"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
+                            <constraint firstItem="tRg-W8-CcD" firstAttribute="top" secondItem="2Zd-QX-1Ok" secondAttribute="bottom" constant="25" id="8bl-vD-mcg"/>
                             <constraint firstItem="2Zd-QX-1Ok" firstAttribute="top" secondItem="oU5-Mr-uQi" secondAttribute="bottom" constant="40" id="L7Z-2e-UIa"/>
                             <constraint firstItem="oU5-Mr-uQi" firstAttribute="centerX" secondItem="GnS-7l-7Ff" secondAttribute="centerX" id="NBh-ob-6W7"/>
                             <constraint firstItem="2Zd-QX-1Ok" firstAttribute="width" secondItem="oU5-Mr-uQi" secondAttribute="width" id="WhJ-Sz-SmR"/>
+                            <constraint firstItem="3mf-tw-ECq" firstAttribute="centerX" secondItem="GnS-7l-7Ff" secondAttribute="centerX" id="cuh-HN-WV3"/>
                             <constraint firstItem="oU5-Mr-uQi" firstAttribute="top" secondItem="PG5-Ev-2sm" secondAttribute="bottom" constant="50" id="f2V-8R-9Bc"/>
+                            <constraint firstItem="3mf-tw-ECq" firstAttribute="top" secondItem="tRg-W8-CcD" secondAttribute="bottom" constant="25" id="hn6-8J-HUY"/>
                             <constraint firstItem="2Zd-QX-1Ok" firstAttribute="centerX" secondItem="GnS-7l-7Ff" secondAttribute="centerX" id="xOT-KF-gIB"/>
+                            <constraint firstItem="tRg-W8-CcD" firstAttribute="centerX" secondItem="GnS-7l-7Ff" secondAttribute="centerX" id="xuw-yp-zeF"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" id="Ck8-LF-3KI">
@@ -109,6 +121,8 @@
                         </rightBarButtonItems>
                     </navigationItem>
                     <connections>
+                        <outlet property="addUpdateButton" destination="tRg-W8-CcD" id="2Pr-mX-7Lq"/>
+                        <outlet property="deleteButton" destination="3mf-tw-ECq" id="UEX-4N-n6J"/>
                         <outlet property="imageviewer" destination="oU5-Mr-uQi" id="opr-mP-9FK"/>
                         <outlet property="textBox" destination="2Zd-QX-1Ok" id="k1a-vd-GCf"/>
                     </connections>

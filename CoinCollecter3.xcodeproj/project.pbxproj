@@ -105,6 +105,7 @@
 				TargetAttributes = {
 					D6EDFECC1E674743002071DE = {
 						CreatedOnToolsVersion = 8.3;
+						DevelopmentTeam = 5335627933;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -274,7 +275,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5335627933;
 				INFOPLIST_FILE = CoinCollecter3/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.kjemtrup.CoinCollecter3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -286,7 +289,9 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = 5335627933;
 				INFOPLIST_FILE = CoinCollecter3/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = me.kjemtrup.CoinCollecter3;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -313,6 +318,7 @@
 				D6EDFEE41E674744002071DE /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 

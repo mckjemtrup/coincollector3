@@ -45,6 +45,15 @@ class ViewController: UIViewController, UITableViewDelegate, UITableViewDataSour
         return cell
         
     }
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let coin = coins[indexPath.row]
+        performSegue(withIdentifier: "coinSegue", sender: coin)
+        
+    }
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        let nextVC = segue.destination as! AddCoinViewController
+        nextVC.coin = sender as? Coins 
+    }
 
 
 }
